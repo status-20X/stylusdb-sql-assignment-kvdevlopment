@@ -41,15 +41,16 @@ jobs:
         command: npm run test:3
         timeout: 10
         max-score: 10
-    - name: Step-4 Test
-      id: step-4-test
-      uses: education/autograding-command-grader@v1
-      with:
-       test-name: Step-4 Test
-        setup-command: npm install
-        command: npm run test:4
-        timeout: 10
-        max-score: 10
+        {
+        "name": "STEP-4 Test",
+        "setup": "npm install",
+        "run": "npm run test:4",
+        "input": "",
+        "output": "",
+        "comparison": "exact",
+        "timeout": 10,
+        "points": 10
+        },
     - name: Step-5 Test
       id: step-5-test
       uses: education/autograding-command-grader@v1
