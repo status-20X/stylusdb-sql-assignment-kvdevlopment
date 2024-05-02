@@ -1,12 +1,15 @@
 name: Autograding Tests
-'on':
-- push
-- workflow_dispatch
-- repository_dispatch
+
+on:
+  push:
+  workflow_dispatch:
+  repository_dispatch:
+
 permissions:
   checks: write
   actions: read
   contents: read
+
 jobs:
   run-autograding-tests:
     runs-on: ubuntu-latest
@@ -49,6 +52,7 @@ jobs:
         setup-command: npm install
         command: npm run test:4
         timeout: 10
+        max-score: 10
     - name: Step-5 Test
       id: step-5-test
       uses: education/autograding-command-grader@v1
