@@ -45,11 +45,11 @@ jobs:
       id: step-4-test
       uses: education/autograding-command-grader@v1
       with:
-        test-name: Step-4 Test
-        setup-command: npm install
-        command: npm run test:4
-        timeout: 10
-        max-score: 10
+       test-name: Step-4 Test
+        setup-command:npm install
+        command:npm run test:4
+        timeout:10
+        max-score:10
     - name: Step-5 Test
       id: step-5-test
       uses: education/autograding-command-grader@v1
